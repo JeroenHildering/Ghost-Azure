@@ -129,6 +129,30 @@ td, th{ padding: 0; }
     -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: 'Elusive-Icons';
+  src: url('../fonts/elusiveicons-webfont.eot?v=2.0.0');
+  src: url('../fonts/elusiveicons-webfont.eot?#iefix&v=2.0.0') format('embedded-opentype'), 
+	   url('../fonts/elusiveicons-webfont.woff?v=2.0.0') format('woff'), 
+	   url('../fonts/elusiveicons-webfont.ttf?v=2.0.0') format('truetype'), 
+	   url('../fonts/elusiveicons-webfont.svg?v=2.0.0#elusiveiconsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.elusive-icon:before {
+    font-family: "Elusive-Icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    text-decoration: none !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /* Each icon is created by inserting the correct character into the
    content of the :before pseudo element. Like a boss. */
 .icon-ghost:before {
@@ -140,6 +164,16 @@ td, th{ padding: 0; }
 .icon-twitter:before {
     content: "\f602";
     font-size: 1.1em;
+}
+.icon-google-plus:before {
+    content: "\f603";
+}
+.elusive-icon.linkedin{
+	top: -.03em;
+	position: relative;
+}
+.elusive-icon.linkedin:before {
+	content: "\f19d";
 }
 .icon-google-plus:before {
     content: "\f603";
@@ -995,7 +1029,8 @@ body.nav-opened .nav {
 .post {
     position: relative;
     width: 80%;
-    max-width: 710px;
+    /*max-width: 710px;*/
+    max-width: 1000px;
     margin: 4rem auto;
     padding-bottom: 4rem;
     border-bottom: #EBF2F6 1px solid;
@@ -1271,7 +1306,7 @@ body.page-template .post-title {
 .post-footer .share a {
     font-size: 1.8rem;
     display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
+    margin: 1rem 1.2rem 1.6rem 0;
     color: #BBC7CC;
     text-decoration: none;
 }
@@ -1285,7 +1320,9 @@ body.page-template .post-title {
 .post-footer .share .icon-google-plus:hover {
     color: #dd4b39;
 }
-
+.post-footer .share .elusive-icon.linkedin:hover {
+    color: #0077b5;
+}
 
 /* ==========================================================================
    6. Author profile
